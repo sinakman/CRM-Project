@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+@model DAL.ORM.Entity.Product
+<h2>Yeni Modül Ekle</h2>
+
+<form action="/CRMarea/ProductModul/Add" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Name">Modül Adı</label>
+        <input type="text" name="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Description">Açıklama</label>
+        <input type="text" name="Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="ReleaseDate">Yayın Tarihi</label>
+        <input type="date" name="ReleaseDate" class="form-control" />
+    </div>
+    <div style="visibility:hidden" class="form-group">
+        <label for="ProductID">Ürün Seçiniz</label>
+        <select name="ProductID" class="form-control">
+            
+                <option value="@Model.ID">@Model.Name</option>
+            
+        </select>
+    </div>
+
+
+
+    <input type="submit" value="Ekle" class="form-control btn btn-primary" />
+</form>

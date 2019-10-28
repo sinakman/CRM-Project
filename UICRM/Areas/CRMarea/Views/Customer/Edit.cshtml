@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+@using UICRM.Areas.CRMarea.Models
+@model CustomerDTO
+<h2>Müşteri Bilgisi Düzenle</h2>
+
+<a href="@Url.Action("Details","Customer",new { id=Model.Id})" class="btn btn-primary"><i class="glyphicon glyphicon-backward"></i></a>
+
+<form action="/CRMarea/Customer/Edit" method="post">
+    <div class="form-group">
+        <label for="Name">Adı</label>
+        <input type="text" name="Name" value="@Model.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Phone">Tel</label>
+        <input type="tel" name="Phone" value="@Model.Phone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Address">Adres</label>
+        <input type="text" name="Address" value="@Model.Address" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="DBType">DB</label>
+        <input type="text" name="DBType" value="@Model.DBtype" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="AppServer">Server</label>
+        <input type="text" name="AppServer" value="@Model.AppServer" class="form-control" />
+    </div>
+
+    <input style="visibility:hidden" type="text" name="Id" value="@Model.Id" />
+    <input type="submit" value="Güncelle" class="form-control btn btn-primary" />
+</form>
+

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Yeni Personel Ekle</h2>
+
+
+<form action="/CRMarea/CustomerPerson/Add" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Name">Adı</label>
+        <input type="text" name="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="SurName">Soyadı</label>
+        <input type="text" name="SurName" class="form-control" />
+    </div>
+    <div class="form-group" >
+        <label for="Email">Eposta</label>
+        <input type="email" name="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Phone">Tel</label>
+        <input type="tel" name="Phone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="MobilePhone">Cep</label>
+        <input type="tel" name="MobilePhone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Title">Görevi</label>
+        <input type="text" name="Title" class="form-control" />
+    </div>
+    <div style="visibility:hidden" class="form-group">
+        <label for="CustomerID">Müşteri Seçiniz</label>
+        <select name="CustomerID" class="form-control">
+
+            <option value="@Model.ID">@Model.Name</option>
+
+        </select>
+    </div>
+
+
+
+    <input type="submit" value="Ekle" class="form-control btn btn-primary" />
+</form>

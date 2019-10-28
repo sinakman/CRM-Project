@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Edit";
+}
+@using UICRM.Areas.CRMarea.Models
+@model EmployeeDTO
+<h2>Edit</h2>
+
+
+<form action="/CRMarea/Employee/Edit" method="post">
+    <div class="form-group">
+        <label for="Name">Adı</label>
+        <input type="text" name="Name" value="@Model.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="SurName">Soyadı</label>
+        <input type="text" name="SurName" value="@Model.Surname" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="TCNo">TC No</label>
+        <input type="number" name="TCNo" value="@Model.TCNo" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Phone">Tel</label>
+        <input type="tel" name="Phone" value="@Model.Phone" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Eposta</label>
+        <input type="email" name="Email" value="@Model.Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="UserName">Kullanıcı Adı</label>
+        <input type="text" name="UserName" value="@Model.UserName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Password">Şifre</label>
+        <input type="password" name="Password" value="@Model.Password" class="form-control" />
+    </div>
+
+    <input style="visibility:hidden" type="text" name="Id" value="@Model.Id" />
+    <input type="submit" value="Güncelle" class="form-control btn btn-primary" />
+</form>

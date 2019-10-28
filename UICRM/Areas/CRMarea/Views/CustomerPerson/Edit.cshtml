@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+@using UICRM.Areas.CRMarea.Models
+@model CustomerPersonVM
+<h2>Personeli Düzenle</h2>
+
+
+
+
+@*<a href="@Url.Action("Details","Customer",new { id=Model.Id})" class="btn btn-primary"><i class="glyphicon glyphicon-backward"></i></a>*@
+
+<form action="/CRMarea/CustomerPerson/Edit" method="post">
+    <div class="form-group">
+        <label for="Name">Adı</label>
+        <input type="text" name="Name" value="@Model.CustomerPer.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="SurName">Soyadı</label>
+        <input type="text" name="SurName" value="@Model.CustomerPer.Surname" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Phone">Tel</label>
+        <input type="tel" name="Phone" value="@Model.CustomerPer.Phone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="MPhone">Cep</label>
+        <input type="tel" name="MPhone" value="@Model.CustomerPer.Mphone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Email">Eposta</label>
+        <input type="email" name="Email" value="@Model.CustomerPer.Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Title">Görevi</label>
+        <input type="text" name="Title" value="@Model.CustomerPer.Title" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <select name="CustomerID" class="form-control">
+            @foreach (var item in Model.Customers)
+            {
+                <option value="@item.ID">@item.Name</option>
+            }
+        </select>
+    </div>
+
+    <input style="visibility:hidden" type="text" name="Id" value="@Model.CustomerPer.Id" />
+    <input type="submit" value="Güncelle" class="form-control btn btn-primary" />
+</form>
+
+

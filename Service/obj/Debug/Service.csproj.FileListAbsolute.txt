@@ -1,0 +1,15 @@
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\Service.dll.config
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\Service.dll
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\Service.pdb
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\DAL.dll
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\EntityFramework.dll
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\DAL.pdb
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\DAL.dll.config
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\EntityFramework.xml
+C:\Users\snakm\source\repos\CRMProject\Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\snakm\source\repos\CRMProject\Service\obj\Debug\Service.csprojAssemblyReference.cache
+C:\Users\snakm\source\repos\CRMProject\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\snakm\source\repos\CRMProject\Service\obj\Debug\Service.csproj.CopyComplete
+C:\Users\snakm\source\repos\CRMProject\Service\obj\Debug\Service.dll
+C:\Users\snakm\source\repos\CRMProject\Service\obj\Debug\Service.pdb

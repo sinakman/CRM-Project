@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/CRMarea/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/js/pages/newjs.js"></script>
+<h2>Add</h2>
+
+<form action="/CRMarea/Employee/Add" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Name">Ad</label>
+        <input type="text" name="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Surname">Soyad</label>
+        <input type="text" name="Surname" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="TCNo">TC No</label>
+        <input type="text" name="TCNo" class="form-control" maxlength="11" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Phone">Telefon No</label>
+        <input id="phone" ng-app="my-app" type="tel" name="Phone" class="form-control"  />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" name="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="UserName">Kullanıcı Adı</label>
+        <input type="text" name="UserName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Password">Şifre</label>
+        <input type="password" name="Password" class="form-control" maxlength="8" required />
+    </div>
+    <input id="submitButton" type="submit" value="Ekle" class="form-control btn btn-primary" />
+</form>
+
+
+@*<script src="~/Scripts/jquery.inputmask/jquery.inputmask.bundle.js">
+    </script>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>*@
+@*<script src="~/Scripts/inputmask/inputmask.js"></script>
+<script src="~/Scripts/inputmask/jquery.inputmask.js"></script>
+<script src="~/Scripts/js/pages/jq331.js"></script>*@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#phone").add("+90 (999) 999-9999");
+        });
+</script>
+

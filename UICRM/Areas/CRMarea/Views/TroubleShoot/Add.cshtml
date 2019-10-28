@@ -1,0 +1,37 @@
+﻿@model Tuple<List<DAL.ORM.Entity.Customer>, List<DAL.ORM.Entity.Product>, DAL.ORM.Entity.TroubleShoot>
+@{
+    /**/
+
+    ViewBag.Title = "Add";
+}
+
+<h2>Tüm Destekler</h2>
+
+
+
+
+@using (Html.BeginForm("Add", "TroubleShoot", FormMethod.Post))
+{
+<table cellpadding="2" cellspacing="2">
+    <tr>
+        <td>Ürün</td>
+        <td>
+            @Html.DropDownListFor(x => x.Item3.ProductID, new SelectList(Model.Item2, "ID", "Name"))
+        </td>
+    </tr>
+    <tr>
+        <td>Müşteri</td>
+        <td>@Html.DropDownListFor(x => x.Item3.CustomerID, new SelectList(Model.Item1, "ID", "Name"))</td>
+    </tr>
+    <tr>
+        <td>Bitiş Tarihi</td>
+        <td>@Html.TextBoxFor(x => x.Item3.EndDate, new { @class = "form-control", @type = "date" })</td>
+    </tr>
+
+    <tr>
+        <td>
+            <button type="submit" class="btn btn-success">Ekle</button>
+        </td>
+    </tr>
+</table>
+}

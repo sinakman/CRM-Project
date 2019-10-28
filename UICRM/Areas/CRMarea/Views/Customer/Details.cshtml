@@ -1,0 +1,121 @@
+﻿@model DAL.ORM.Entity.Customer
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Müşteri Detaylı Bilgisi</h2>
+
+<div class="col-lg-12">
+    <section class="panel panel-default">
+        <header class="panel-heading">
+            Detay
+        </header>
+
+        <a href="@Url.Action("List","Customer",new { id=Model.ID})" class="btn btn-primary"><i class="glyphicon glyphicon-backward"></i></a>
+        <div class="container">
+
+            <dl class="dl-horizontal">
+                <dt>
+                    Adı:
+                </dt>
+
+                <dd>
+                    @Model.Name
+                </dd>
+
+                <dt>
+                    Adres:
+                </dt>
+
+                <dd>
+                    @Model.Address
+                </dd>
+
+                <dt>
+                    Tel:
+                </dt>
+
+                <dd>
+                    @Model.Phone
+                </dd>
+
+                <dt>
+                    DB Tipi:
+                </dt>
+
+                <dd>
+                    @Model.DBType
+                </dd>
+
+                <dt>
+                    Server:
+                </dt>
+
+                <dd>
+                    @Model.AppServer
+                </dd>
+
+                <dt>
+                    Eklendiği Tarih:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreateDate)
+                </dd>
+
+                <dt>
+                    Ekleyen:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedUserName)
+                </dd>
+
+                <dt>
+                    Eklenen PC:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedCompName)
+                </dd>
+
+                <dt>
+                    Güncellendiği Tarih:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpdateDate)
+                </dd>
+
+                <dt>
+                    Güncelleyen Kişi:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpdatedUserName)
+                </dd>
+
+                <dt>
+                    Güncellendiği PC:
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpdateCompnName)
+                </dd>
+
+
+            </dl>
+
+        </div>
+
+    </section>
+</div>
+
+<a href="@Url.Action("Edit","Customer",new { id=Model.ID})" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
+
+<a href="@Url.Action("Del","Customer",new { id=Model.ID})" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+
+<a href="@Url.Action("Add","CustomerPerson",new { id=Model.ID})" class="btn btn-primary">Personel Ekle<i class="glyphicon glyphicon-adjust"></i></a>
+<a href="@Url.Action("List","CustomerPerson",new { id=Model.ID})" class="btn btn-primary">Personel Gör<i class="glyphicon glyphicon-list"></i></a>
+<a href="@Url.Action("ListByCustomer","TroubleShoot",new { id=Model.ID})" class="btn btn-primary">Destek<i class="glyphicon glyphicon-list"></i></a>
+

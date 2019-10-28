@@ -1,0 +1,50 @@
+﻿@model Tuple<List<DAL.ORM.Entity.Customer>, List<DAL.ORM.Entity.Product>, DAL.ORM.Entity.TroubleShoot>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/images/bootstrap.min.css" rel="stylesheet" />
+    <title>Added</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row col-lg-6">
+            <form action="/CRMarea/TroubleShoot/Add" method="post" enctype="multipart/form-data">
+                <br />
+                <div class="form-group">
+                    <label>Ürün</label>
+                    @Html.DropDownListFor(x => x.Item3.ProductID ,new SelectList(Model.Item2, "ID", "Name"), new { @class = "form-control" })
+                </div>
+                <br /><br />
+
+                <div class="form-group">
+                    <label>Müşteri</label>
+                    @Html.DropDownListFor(x => x.Item3.CustomerID, new SelectList(Model.Item1, "ID", "Name"), new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label>Bitiş Tarihi</label>
+                    @Html.TextBoxFor(x => x.Item3.EndDate, new { @class = "form-control", @type = "date" })
+                </div>
+
+
+                <button type="submit" class="btn btn-success">Ekle</button>
+            </form>             
+        </div>
+        
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
